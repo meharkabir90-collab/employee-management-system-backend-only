@@ -2,7 +2,7 @@ const express = require("express");
 const authRoutes = require('./Routes/authRoutes')
 const departmentRoutes = require('./Routes/departmentRoutes')
 const employeeRoutes = require('./Routes/employeeRoutes')
-const errorMiddleware = require('./Middleware/errorMiddleware')
+const errorMiddleware = require('./middleware/errorMiddleware')
 
 const app = express();
 app.use(express.json());
