@@ -5,8 +5,8 @@ const {  createDepartment,
     getDepartmentById,
     updateDepartment,
     deleteDepartment } = require('../controller/departmentController');
-const authMiddleware = require('../Middleware/authMiddleware');
-const  { adminMiddleware }  = require('../Middleware/adminMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
+const  { adminMiddleware }  = require('../middleware/adminMiddleware');
 
 console.log(createDepartment);
 console.log(authMiddleware);
