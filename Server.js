@@ -2,7 +2,9 @@ const express = require("express");
 const authRoutes = require('./Routes/authRoutes')
 const departmentRoutes = require('./Routes/departmentRoutes')
 const employeeRoutes = require('./Routes/employeeRoutes')
-const errorMiddleware = require('./Middleware/errorMiddleware')
+const errorMiddleware = require('./middleware/errorMiddleware')
+const swaggerSpec = require('./config/swagger')
+const swaggerUi = require('swagger-ui-express')
 
 const app = express();
 app.use(express.json());
@@ -32,5 +34,11 @@ app.use('/api/employee', employeeRoutes);
 
 // Error middleware 
 app.use(errorMiddleware);
+
+//swagger documentation
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+
+
 
 
