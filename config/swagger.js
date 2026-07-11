@@ -13,7 +13,7 @@ const options = {
             url: "http://localhost:5000",
             },
             {
-            url: "https://employee-management-s-backend.vercel.app/",
+            url: "https://employee-management-system-backend-eosin.vercel.app",
             },
             
         ],
@@ -28,7 +28,7 @@ const options = {
        },
       },
     },
-    apis: ["./routes/*.js"]
+    apis: ["./Routes/*.js"]
 
 
 
