@@ -34,11 +34,17 @@ app.use('/api/department', departmentRoutes);
 //employee Routes
 app.use('/api/employee', employeeRoutes);
 
+//swagger documentation
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
+app.get("/", (req, res) => {
+    res.send("Employee Management API Running");
+});
+
 // Error middleware 
 app.use(errorMiddleware);
 
-//swagger documentation
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 
 
