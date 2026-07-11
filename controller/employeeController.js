@@ -4,7 +4,7 @@ const Department = require("../models/Department");
 
 
 // Create Employee
-// =======================
+
 
    console.log("Resolved Path:", require.resolve("../models/Employee"));
 console.log("Employee:", Employee);
@@ -82,10 +82,10 @@ const createEmployee = async (req, res, next) => {
 };
 
 
-// =======================
+
 // Get All Employees
 // Search + Filter
-// =======================
+
 const getEmployees = async (req, res, next) => {
        
 
