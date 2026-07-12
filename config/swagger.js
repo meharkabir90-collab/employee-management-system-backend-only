@@ -13,7 +13,11 @@ const options = {
             url: "http://localhost:5000",
             },
             {
+
                url: process.env.BASE_URI,
+
+             url: "https://employee-management-system-backend.vercel.app",
+
             },
             
         ],
