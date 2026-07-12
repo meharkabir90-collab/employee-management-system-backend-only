@@ -41,6 +41,10 @@ app.get("/", (req, res) => {
     res.send("Employee Management API Running");
 });
 
+app.get("/swagger.json", (req, res) => {
+  res.json(swaggerSpec);
+});
+
 // Error middleware 
 app.use(errorMiddleware);
 
