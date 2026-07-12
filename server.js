@@ -1,3 +1,7 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
+
 const express = require("express");
 const authRoutes = require('./Routes/authRoutes')
 const departmentRoutes = require('./Routes/departmentRoutes')
@@ -7,12 +11,16 @@ const errorMiddleware = require('./middleware/errorMiddleware')
 const swaggerSpec = require('./config/swagger')
 const swaggerUi = require('swagger-ui-express')
 
+const swaggerOptions = {
+  explorer: true,
+}
+
+
 
 const app = express();
 app.use(express.json());
 
-const dotenv = require('dotenv');
-dotenv.config();
+
 
 
 
@@ -35,7 +43,12 @@ app.use('/api/department', departmentRoutes);
 app.use('/api/employee', employeeRoutes);
 
 //swagger documentation
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+//swagger documentation
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, swaggerOptions)
+);
 
 app.get("/", (req, res) => {
     res.send("Employee Management API Running");
