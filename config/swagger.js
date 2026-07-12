@@ -16,7 +16,6 @@ const options = {
 
                url: process.env.BASE_URI,
 
-             url: "https://employee-management-system-backend.vercel.app",
 
             },
             
