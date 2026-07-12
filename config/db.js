@@ -8,7 +8,6 @@ const dbConnect = async () => {
     console.log("Database Name:", mongoose.connection.name); // ✅ correct place
   } catch (error) {
     console.log(error);
-    process.exit(1);
   }
 };
 
